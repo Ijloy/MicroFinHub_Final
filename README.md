@@ -1,4 +1,5 @@
-[English Version](#english-version) | [Versión en Español](#version-en-espanol)
+[English Version](#english-version) | [Versión en Español](#versión-en-español)
+
 
 ## English Version
 # 💼 Investment Management System
@@ -186,6 +187,7 @@ This project was developed to strengthen knowledge in:
 ---
 
 ## Versión en Español
+
 💼 Sistema de Inversiones
 
 Sistema de gestión de inversiones desarrollado en Java con interfaz gráfica Swing, aplicando Programación Orientada a Objetos (POO) y estructuras de datos como listas, colas y árbol binario.
