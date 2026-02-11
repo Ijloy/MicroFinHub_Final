@@ -130,7 +130,7 @@ This project demonstrates:
 
 **Dereck Proaño**  
 Software Engineering Student  
-Academic Project – 2026
+Academic Project – 2025
 
 ---
 
@@ -269,7 +269,7 @@ Este proyecto demuestra:
 
 **Dereck Proaño**  
 Estudiante de Ingeniería de Software  
-Proyecto académico – 2026
+Proyecto académico – 2025
 
 ---
 
