@@ -1,3 +1,5 @@
+[English Version](#english-version) | [Versión en Español](#versión-en-español)
+
 # 💼 Investment Management System
 ### Java | OOP | Data Structures | Swing GUI
 
