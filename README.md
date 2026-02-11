@@ -1,190 +1,140 @@
 [English Version](#english-version) | [Versión en Español](#versión-en-español)
 
-
 ## English Version
-# 💼 Investment Management System
-### Java | OOP | Data Structures | Swing GUI
+---
 
-A desktop investment management application developed in **Java**, applying **Object-Oriented Programming principles**, core **data structures**, and a graphical interface built with **Java Swing**.
+# 📈 Investment Management System
 
-This project demonstrates solid understanding of software design, architecture organization, and data handling in a structured academic environment.
+Desktop application developed in **Java + Swing** that simulates an investment management platform with **Administrator** and **Investor** roles, including data structures such as lists, queues, and a binary tree.
 
 ---
 
-## 🚀 Project Overview
+## 🚀 Main Features
 
-The system simulates a financial investment platform where:
+### 👤 User Management
+- Investor registration and login
+- Administrator authentication
+- Role-based access control (Administrator / Investor)
+- Logout functionality
 
-- Investors can register and manage their investments.
-- Administrators can manage financial instruments.
-- Investment history is tracked dynamically.
-- Portfolio totals are calculated in real time.
+### 💰 Investment Management
+- Register investments
+- Delete investments
+- Automatic calculation of total invested amount
+- Investment processing using queue (FIFO)
 
-The application follows a structured layered design:
+### 📊 Financial Instrument Management
+- Add instruments (Administrator)
+- Remove instruments (Administrator)
+- Dynamic table display
+- Automatic ID generation
 
-- **Model Layer (Business Logic)**
-- **Control Layer (System Core)**
-- **View Layer (GUI with Swing)**
+### 🕓 Event History
+- Global system event logging
+- Investor-specific history tracking
 
 ---
 
-## 🧠 Technical Concepts Applied
+## 🧠 Data Structures Used
 
+| Structure | Purpose |
+|-----------|----------|
+| `ArrayList` | Store instruments and investments |
+| `Queue (LinkedList)` | Process investments |
+| `Binary Tree` | Organize financial instruments |
+| `JTable` | Display data visually |
+| `HashMap` *(used in other projects)* | Efficient key-based management |
+
+---
+
+## 🏗️ Project Architecture
+
+SistemaInversiones
+│
+├── Usuario (Abstract Class)
+│ ├── Administrador
+│ └── Inversionista
+│
+├── InstrumentoFinanciero
+├── Inversion
+├── Portafolio
+├── Historial
+├── ArbolBinario
+└── Ventana (Graphical Interface - Swing)
+
+
+---
+
+## 🖥️ Graphical User Interface
+
+Built using **Java Swing**, includes:
+
+- Login panel
+- Investment panel
+- Portfolio visualization
+- Administrative instrument management
+- Dynamic tables with automatic updates
+
+---
+
+## 🔐 System Roles
+
+### 👨‍💼 Administrator
+- Logs in with predefined credentials
+- Can add and remove instruments
+- Full system access
+
+### 👨‍💻 Investor
+- Automatically registers if not existing
+- Can create investments
+- Can remove investments
+- Views portfolio and total invested amount
+
+---
+
+## 📦 Technologies Used
+
+- Java
+- Java Swing
 - Object-Oriented Programming (OOP)
-- Inheritance & Encapsulation
-- Abstract Classes
-- Binary Search Tree (BST)
-- ArrayList & Queue (LinkedList)
-- Event-driven programming
-- Dynamic table models (JTable)
-- Session handling
-- Basic system architecture design
-
----
-
-## 🏗 Architecture
-
-📦 InvestmentSystem
-┣ 📄 Usuario.java
-┣ 📄 Administrador.java
-┣ 📄 Inversionista.java
-┣ 📄 InstrumentoFinanciero.java
-┣ 📄 Inversion.java
-┣ 📄 Portafolio.java
-┣ 📄 Historial.java
-┣ 📄 ArbolBinario.java
-┣ 📄 SistemaInversiones.java
-┗ 📄 Ventana.java
-
-
-### 🔹 Model
-Contains domain logic and entities.
-
-### 🔹 Controller
-`SistemaInversiones` acts as the system core, managing:
-- Users
-- Instruments
-- Investments
-- Session state
-- History tracking
-
-### 🔹 View
-`Ventana.java` provides a graphical interface using:
-- JFrame
-- JTabbedPane
-- JTable
-- JComboBox
-- JOptionPane
-
----
-
-## 📊 Core Features
-
-### 👤 Investor
-- Register / Login
-- Add investment
-- Remove investment
-- View portfolio
-- View investment history
-- Real-time total calculation
-
-### 🛠 Administrator
-- Login authentication
-- Add new financial instruments
-- Remove instruments
-- Auto-generate unique instrument IDs
-
-### 📈 Portfolio
-- Dynamic investment storage (ArrayList)
-- FIFO processing queue (Queue)
-- Total investment calculation
-
-### 🌳 Data Structure
-Binary Search Tree implementation for financial instruments:
-- Insert
-- Search
-- Delete
-
----
-
-## 🔐 Default Credentials
-
-**Administrator**
-ID: admin1
-Password: 1234
-
-
-Investors are automatically registered if the ID does not exist.
-
----
-
-## ⚙️ How to Run
-
-1. Clone repository:
-git clone https://github.com/yourusername/yourrepository.git
-
-
-2. Open in:
-- IntelliJ IDEA
-- Eclipse
-- NetBeans
-
-3. Run:
-Ventana.java
-
-
----
-
-## 📌 Sample Initial Instruments
-
-- Stocks
-- Bonds
-- Cryptocurrencies
-
----
-
-## 📈 Skills Demonstrated
-
-✔ Java Desktop Application Development  
-✔ OOP Design  
-✔ Data Structure Implementation  
-✔ GUI Event Handling  
-✔ Collection Framework Usage  
-✔ Clean Class Organization  
-✔ System Logic Separation  
-
----
-
-## 🔮 Future Improvements
-
-- Password encryption (Hashing)
-- Database integration (MySQL)
-- Persistent storage
-- Full MVC refactor
-- Balanced tree implementation
-- Edit instrument functionality
-- Data validation enhancements
-- Export reports (PDF / Excel)
-- Performance optimizations
-
----
-
-## 🎯 Academic Purpose
-
-This project was developed to strengthen knowledge in:
-
-- Software Engineering fundamentals
 - Data Structures
-- Java Desktop Development
-- System organization and scalability principles
+- Client–System model
+
+---
+
+## 🎯 Academic Objectives
+
+This project demonstrates:
+
+- Practical OOP implementation
+- Use of dynamic data structures
+- Role management and authentication
+- Separation of responsibilities
+- Modular design
+- GUI event handling
+
+---
+
+## 📌 Future Improvements
+
+- Data persistence with files or database
+- Password encryption
+- Full binary tree integration
+- More robust validations
+- MVC pattern implementation
+- Report export functionality
 
 ---
 
 ## 👨‍💻 Author
 
-**Dereck Proaño**
+**Dereck Proaño**  
 Software Engineering Student  
-Focused on backend logic, data structures, and system architecture.
+Academic Project – 2026
+
+---
+
+⭐ If you find this project interesting, feel free to star the repository.
 
 ---
 
