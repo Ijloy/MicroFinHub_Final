@@ -179,5 +179,184 @@ This project was developed to strengthen knowledge in:
 ## 👨‍💻 Author
 
 **Dereck Proaño**  
+
+---
+
+## 🇪🇸 Versión en Español
+
+💼 Sistema de Inversiones
+
+Sistema de gestión de inversiones desarrollado en Java con interfaz gráfica Swing, aplicando Programación Orientada a Objetos (POO) y estructuras de datos como listas, colas y árbol binario.
+
+📌 Descripción del Proyecto
+
+Este sistema permite:
+
+Registro y autenticación de inversionistas
+
+Autenticación de administrador
+
+Gestión de instrumentos financieros
+
+Registro y eliminación de inversiones
+
+Cálculo del total invertido
+
+Historial de eventos
+
+Procesamiento de inversiones con estructura de cola
+
+Organización de instrumentos mediante árbol binario
+
+El proyecto simula el funcionamiento básico de una plataforma financiera.
+
+🧠 Conceptos Aplicados
+🔹 Programación Orientada a Objetos
+
+Herencia (Usuario → Inversionista / Administrador)
+
+Encapsulamiento
+
+Polimorfismo
+
+Clases abstractas
+
+🔹 Estructuras de Datos
+
+ArrayList → almacenamiento de instrumentos e inversiones
+
+Queue (LinkedList) → procesamiento de inversiones
+
+Árbol Binario → organización y búsqueda de instrumentos
+
+JTable con DefaultTableModel → visualización de datos
+
+🔹 Interfaz Gráfica
+
+JFrame
+
+JTabbedPane
+
+JTable
+
+JOptionPane
+
+JComboBox
+
+Eventos con ActionListener
+
+👥 Roles del Sistema
+👤 Inversionista
+
+Registrarse o iniciar sesión
+
+Registrar inversiones
+
+Eliminar inversiones
+
+Ver su portafolio
+
+Consultar historial
+
+Ver total invertido
+
+👨‍💼 Administrador
+
+Iniciar sesión
+
+Agregar instrumentos financieros
+
+Eliminar instrumentos
+
+Visualizar instrumentos disponibles
+
+🏗️ Arquitectura del Proyecto
+Clases principales:
+
+SistemaInversiones → Lógica central del sistema
+
+Usuario (abstracta)
+
+Inversionista
+
+Administrador
+
+InstrumentoFinanciero
+
+Inversion
+
+Portafolio
+
+Historial
+
+ArbolBinario
+
+Ventana (Interfaz gráfica)
+
+▶️ Cómo Ejecutar el Proyecto
+
+Clonar el repositorio:
+
+git clone https://github.com/tuusuario/turepositorio.git
+
+
+Abrir el proyecto en IntelliJ IDEA o NetBeans.
+
+Ejecutar la clase:
+
+Ventana.java
+
+🔐 Credenciales por Defecto
+
+Administrador:
+
+ID: admin1
+Contraseña: 1234
+
+📊 Funcionalidades Destacadas
+
+✔ Registro automático de nuevos inversionistas
+✔ Generación automática de ID para instrumentos
+✔ Validación de datos (precio, riesgo, montos)
+✔ Cálculo dinámico del total invertido
+✔ Historial separado para inversionista
+✔ Procesamiento FIFO de inversiones
+✔ Control de acceso por rol
+
+📈 Posibles Mejoras Futuras
+
+Persistencia con base de datos
+
+Encriptación de contraseñas
+
+Arquitectura MVC separada
+
+Manejo avanzado de excepciones
+
+Reportes en PDF
+
+Dashboard con gráficos
+
+Tests unitarios
+
+🎯 Objetivo Académico
+
+Este proyecto fue desarrollado como práctica para fortalecer:
+
+Modelado de sistemas reales
+
+Aplicación de estructuras de datos
+
+Desarrollo de interfaces gráficas
+
+Diseño orientado a objetos
+
+Separación de responsabilidades
+
+🧑‍💻 Autor
+
+Desarrollado por: Dereck Proaño
+Estudiante de Ingeniería de Software
+
 Software Engineering Student  
 Focused on backend logic, data structures, and system architecture.
