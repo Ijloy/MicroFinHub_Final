@@ -1,5 +1,6 @@
-[English Version](#english-version) | [Versión en Español](#versión-en-español)
+[English Version](#english-version) | [Versión en Español](#version-en-espanol)
 
+## English Version
 # 💼 Investment Management System
 ### Java | OOP | Data Structures | Swing GUI
 
@@ -184,7 +185,7 @@ This project was developed to strengthen knowledge in:
 
 ---
 
-## 🇪🇸 Versión en Español
+## Versión en Español
 
 💼 Sistema de Inversiones
 
