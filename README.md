@@ -182,185 +182,145 @@ This project was developed to strengthen knowledge in:
 
 ## 👨‍💻 Author
 
-**Dereck Proaño**  
+**Dereck Proaño**
+Software Engineering Student  
+Focused on backend logic, data structures, and system architecture.
 
 ---
 
 ## Versión en Español
 
-💼 Sistema de Inversiones
+---
 
-Sistema de gestión de inversiones desarrollado en Java con interfaz gráfica Swing, aplicando Programación Orientada a Objetos (POO) y estructuras de datos como listas, colas y árbol binario.
+# 📈 Sistema de Gestión de Inversiones
 
-📌 Descripción del Proyecto
+Sistema de escritorio desarrollado en **Java + Swing** que simula una plataforma de gestión de inversiones con roles de **Administrador** e **Inversionista**, incluyendo estructuras de datos como listas, colas y árbol binario.
 
-Este sistema permite:
+---
 
-Registro y autenticación de inversionistas
+## 🚀 Características Principales
 
-Autenticación de administrador
+### 👤 Gestión de Usuarios
+- Registro e inicio de sesión de inversionistas
+- Autenticación de administrador
+- Control de roles (Administrador / Inversionista)
+- Cierre de sesión
 
-Gestión de instrumentos financieros
+### 💰 Gestión de Inversiones
+- Registro de inversiones
+- Eliminación de inversiones
+- Cálculo automático del total invertido
+- Procesamiento de inversiones mediante cola (FIFO)
 
-Registro y eliminación de inversiones
+### 📊 Gestión de Instrumentos Financieros
+- Agregar instrumentos (Administrador)
+- Eliminar instrumentos (Administrador)
+- Listado dinámico en tabla
+- Generación automática de ID
 
-Cálculo del total invertido
+### 🕓 Historial de Eventos
+- Registro global del sistema
+- Historial específico del inversionista
 
-Historial de eventos
+---
 
-Procesamiento de inversiones con estructura de cola
+## 🧠 Estructuras de Datos Utilizadas
 
-Organización de instrumentos mediante árbol binario
+| Estructura | Uso |
+|------------|------|
+| `ArrayList` | Almacenar instrumentos e inversiones |
+| `Queue (LinkedList)` | Procesamiento de inversiones |
+| `Árbol Binario` | Organización de instrumentos financieros |
+| `JTable` | Visualización de datos |
+| `HashMap` *(en otros proyectos del repositorio)* | Gestión eficiente por clave |
 
-El proyecto simula el funcionamiento básico de una plataforma financiera.
+---
 
-🧠 Conceptos Aplicados
-🔹 Programación Orientada a Objetos
+## 🏗️ Arquitectura del Proyecto
 
-Herencia (Usuario → Inversionista / Administrador)
+SistemaInversiones
+│
+├── Usuario (Clase abstracta)
+│ ├── Administrador
+│ └── Inversionista
+│
+├── InstrumentoFinanciero
+├── Inversion
+├── Portafolio
+├── Historial
+├── ArbolBinario
+└── Ventana (Interfaz Gráfica - Swing)
 
-Encapsulamiento
 
-Polimorfismo
+---
 
-Clases abstractas
+## 🖥️ Interfaz Gráfica
 
-🔹 Estructuras de Datos
+Desarrollada con **Java Swing**, incluye:
 
-ArrayList → almacenamiento de instrumentos e inversiones
+- Panel de login
+- Panel de inversión
+- Visualización de portafolio
+- Gestión administrativa de instrumentos
+- Tablas dinámicas con actualización automática
 
-Queue (LinkedList) → procesamiento de inversiones
+---
 
-Árbol Binario → organización y búsqueda de instrumentos
+## 🔐 Roles del Sistema
 
-JTable con DefaultTableModel → visualización de datos
+### 👨‍💼 Administrador
+- Inicia sesión con credenciales predefinidas
+- Puede agregar y eliminar instrumentos
+- Accede a todos los módulos
 
-🔹 Interfaz Gráfica
+### 👨‍💻 Inversionista
+- Se registra automáticamente si no existe
+- Puede invertir
+- Puede eliminar inversiones
+- Visualiza su portafolio y total invertido
 
-JFrame
+---
 
-JTabbedPane
+## 📦 Tecnologías Utilizadas
 
-JTable
+- Java
+- Java Swing
+- Programación Orientada a Objetos (POO)
+- Estructuras de datos
+- Modelo Cliente–Sistema
 
-JOptionPane
+---
 
-JComboBox
+## 🎯 Objetivos Académicos
 
-Eventos con ActionListener
+Este proyecto demuestra:
 
-👥 Roles del Sistema
-👤 Inversionista
+- Aplicación de POO
+- Uso de estructuras dinámicas
+- Manejo de roles y autenticación
+- Separación de responsabilidades
+- Diseño modular
+- Gestión de eventos en interfaces gráficas
 
-Registrarse o iniciar sesión
+---
 
-Registrar inversiones
+## 📌 Posibles Mejoras Futuras
 
-Eliminar inversiones
+- Persistencia de datos con archivos o base de datos
+- Encriptación de contraseñas
+- Implementación completa del árbol binario en el sistema
+- Validaciones más robustas
+- Patrón MVC
+- Exportación de reportes
 
-Ver su portafolio
+---
 
-Consultar historial
+## 👨‍💻 Autor
 
-Ver total invertido
+**Dereck Proaño**  
+Estudiante de Ingeniería de Software  
+Proyecto académico – 2026
 
-👨‍💼 Administrador
+---
 
-Iniciar sesión
-
-Agregar instrumentos financieros
-
-Eliminar instrumentos
-
-Visualizar instrumentos disponibles
-
-🏗️ Arquitectura del Proyecto
-Clases principales:
-
-SistemaInversiones → Lógica central del sistema
-
-Usuario (abstracta)
-
-Inversionista
-
-Administrador
-
-InstrumentoFinanciero
-
-Inversion
-
-Portafolio
-
-Historial
-
-ArbolBinario
-
-Ventana (Interfaz gráfica)
-
-▶️ Cómo Ejecutar el Proyecto
-
-Clonar el repositorio:
-
-git clone https://github.com/tuusuario/turepositorio.git
-
-
-Abrir el proyecto en IntelliJ IDEA o NetBeans.
-
-Ejecutar la clase:
-
-Ventana.java
-
-🔐 Credenciales por Defecto
-
-Administrador:
-
-ID: admin1
-Contraseña: 1234
-
-📊 Funcionalidades Destacadas
-
-✔ Registro automático de nuevos inversionistas
-✔ Generación automática de ID para instrumentos
-✔ Validación de datos (precio, riesgo, montos)
-✔ Cálculo dinámico del total invertido
-✔ Historial separado para inversionista
-✔ Procesamiento FIFO de inversiones
-✔ Control de acceso por rol
-
-📈 Posibles Mejoras Futuras
-
-Persistencia con base de datos
-
-Encriptación de contraseñas
-
-Arquitectura MVC separada
-
-Manejo avanzado de excepciones
-
-Reportes en PDF
-
-Dashboard con gráficos
-
-Tests unitarios
-
-🎯 Objetivo Académico
-
-Este proyecto fue desarrollado como práctica para fortalecer:
-
-Modelado de sistemas reales
-
-Aplicación de estructuras de datos
-
-Desarrollo de interfaces gráficas
-
-Diseño orientado a objetos
-
-Separación de responsabilidades
-
-🧑‍💻 Autor
-
-Desarrollado por: Dereck Proaño
-Estudiante de Ingeniería de Software
-
-Software Engineering Student  
-Focused on backend logic, data structures, and system architecture.
+⭐ Si te interesa el proyecto, puedes dejar una estrella en el repositorio.
