@@ -1,6 +1,12 @@
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 
-public class SistemaInversiones {
+public class SistemaInversiones implements Serializable {
 
     private ArrayList<InstrumentoFinanciero> instrumentos;
     private ArrayList<Inversionista> inversionistas; // lista de todos los usuarios
@@ -45,6 +51,31 @@ public class SistemaInversiones {
             return true;
         }
         return false;
+    }
+
+    public void guardarSistema() {
+        try (ObjectOutputStream oos =
+                     new ObjectOutputStream(new FileOutputStream("sistema.dat"))) {
+
+            oos.writeObject(this);
+
+            System.out.println("Sistema guardado correctamente");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static SistemaInversiones cargarSistema() {
+        try (ObjectInputStream ois =
+                     new ObjectInputStream(new FileInputStream("sistema.dat"))) {
+
+            return (SistemaInversiones) ois.readObject();
+
+        } catch (Exception e) {
+            System.out.println("No existe archivo, se crea nuevo sistema");
+            return new SistemaInversiones();
+        }
     }
 
     // Verifica si existe un inversionista por ID

@@ -1,5 +1,6 @@
-public class InstrumentoFinanciero {
+import java.io.Serializable;
 
+public class InstrumentoFinanciero implements Serializable {
     private int id;
     private String nombre;
     private double precioActual;

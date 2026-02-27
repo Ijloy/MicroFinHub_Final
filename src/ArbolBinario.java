@@ -43,17 +43,40 @@ public class ArbolBinario {
         raiz = eliminarRec(raiz, id);
     }
 
+    private Nodo encontrarMinimo(Nodo actual) {
+        while (actual.izquierda != null) {
+            actual = actual.izquierda;
+        }
+        return actual;
+    }
+
     private Nodo eliminarRec(Nodo actual, int id) {
         if (actual == null) return null;
 
-        if (id < actual.instrumento.getId())
+        if (id < actual.instrumento.getId()) {
             actual.izquierda = eliminarRec(actual.izquierda, id);
-        else if (id > actual.instrumento.getId())
+        } else if (id > actual.instrumento.getId()) {
             actual.derecha = eliminarRec(actual.derecha, id);
-        else {
-            if (actual.izquierda == null) return actual.derecha;
-            if (actual.derecha == null) return actual.izquierda;
+        } else {
+
+            // Caso 1: sin hijo izquierdo
+            if (actual.izquierda == null)
+                return actual.derecha;
+
+            // Caso 2: sin hijo derecho
+            if (actual.derecha == null)
+                return actual.izquierda;
+
+            // Caso 3: tiene dos hijos
+            Nodo sucesor = encontrarMinimo(actual.derecha);
+
+            // Reemplazar datos
+            actual.instrumento = sucesor.instrumento;
+
+            // Eliminar el sucesor del subárbol derecho
+            actual.derecha = eliminarRec(actual.derecha, sucesor.instrumento.getId());
         }
+
         return actual;
     }
 }

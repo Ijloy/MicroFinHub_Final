@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Historial {
+public class Historial implements Serializable {
 
     private ArrayList<String> eventos;
     private ArrayList<String> eventosInversionista;

@@ -1,5 +1,6 @@
-public class Inversionista extends Usuario {
+import java.io.Serializable;
 
+public class Inversionista extends Usuario implements Serializable {
     private String password;
     private Portafolio portafolio;
 

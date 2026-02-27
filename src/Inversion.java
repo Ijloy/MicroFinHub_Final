@@ -1,5 +1,6 @@
-public class Inversion {
+import java.io.Serializable;
 
+public class Inversion implements Serializable {
     private InstrumentoFinanciero instrumento;
     private double monto;
     private String fecha;

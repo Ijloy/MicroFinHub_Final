@@ -44,8 +44,7 @@ public class Ventana {
     private SistemaInversiones sistema;
 
     public Ventana() {
-        sistema = new SistemaInversiones();
-        bloquearTabs();
+        sistema = SistemaInversiones.cargarSistema();        bloquearTabs();
 
         // LOGIN INVERSIONISTA
         btnIngresarUsuario.addActionListener(e -> {
@@ -265,14 +264,27 @@ public class Ventana {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
+
             Ventana ventana = new Ventana();
             JFrame frame = new JFrame("Sistema de Inversiones");
             frame.setContentPane(ventana.principal);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
+            frame.addWindowListener(new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosing(java.awt.event.WindowEvent e) {
+                    ventana.sistema.guardarSistema(); // guarda antes de cerrar
+                    frame.dispose();
+                    System.exit(0);
+                }
+            });
+
             frame.pack();
+            frame.setLocationRelativeTo(null); // centra la ventana
             frame.setVisible(true);
 
-            // Llamadas post-inicialización para asegurar que los componentes existen
+            // Asegurar que se carguen datos si ya existían
             ventana.cargarTablaInstrumentos();
             ventana.cargarInstrumentosCombo();
         });

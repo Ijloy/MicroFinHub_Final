@@ -1,9 +1,9 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Portafolio {
-
+public class Portafolio implements Serializable {
     private ArrayList<Inversion> inversiones;
     private Queue<Inversion> colaProcesamiento;
 
